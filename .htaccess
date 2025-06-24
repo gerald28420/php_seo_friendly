@@ -1,0 +1,6 @@
+#for forbidden
+Options -Indexes
+
+#Redirect to index.php if not found or anything
+RewriteEngine on
+RewriteRule ^(.*)$ index.php
