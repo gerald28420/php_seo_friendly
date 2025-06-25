@@ -1,6 +1,15 @@
 #for forbidden
 Options -Indexes
+#end
 
 #Redirect to index.php if not found or anything
+#RewriteEngine on
+#RewriteRule ^(.*)$ index.php
+
+#Redirect with URI and params
 RewriteEngine on
-RewriteRule ^(.*)$ index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^(.*)$ index.php?url=$1 [QSA]
+#end
