@@ -1,5 +1,5 @@
 <?php
-define('ROOT', 'http://localhost/testing/php_seo_friendly');
+// define('ROOT', 'http://localhost/testing/php_seo_friendly');
 
 function URL($key = null){
     $arr = explode("/", trim($_GET['url'] ?? 'home',"/"));
